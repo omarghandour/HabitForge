@@ -113,6 +113,7 @@ export function AddHabitDialog({
                       className="resize-none"
                       rows={3}
                       {...field}
+                      value={field.value || ""}
                       data-testid="input-habit-description"
                     />
                   </FormControl>

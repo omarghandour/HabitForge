@@ -76,9 +76,10 @@ export default function Dashboard() {
     },
   });
 
-  const toggleCompletionMutation = useMutation({
+  const toggleCompletionMutation = useMutation<HabitWithStats, Error, string>({
     mutationFn: async (habitId: string) => {
-      return apiRequest("POST", `/api/habits/${habitId}/toggle`, undefined);
+      const res = await apiRequest("POST", `/api/habits/${habitId}/toggle`, undefined);
+      return res.json();
     },
     onSuccess: (data: HabitWithStats) => {
       queryClient.invalidateQueries({ queryKey: ["/api/habits"] });
