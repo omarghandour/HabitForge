@@ -68,7 +68,7 @@ This is a full-stack JavaScript application built with React, Express, and in-me
 - Express.js
 - In-memory storage (MemStorage)
 - Zod for validation
-
+-
 ## API Endpoints
 
 - `GET /api/habits` - Get all habits with statistics
